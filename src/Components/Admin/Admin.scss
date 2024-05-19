@@ -1,0 +1,104 @@
+// Admin.scss
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.conteiner{
+  max-width: 1640px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+}
+
+.admin-container {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    left: -19.7px;
+  }
+  
+  .sidebar {
+    background-color: #0b3d5d ;
+    color: white;
+    width: 250px;
+    height: 100%;
+    transition: width 0.3s, padding 0.3s;
+    overflow: hidden;
+  
+    &.closed {
+      width: 60px;
+  
+      .links .link .text {
+        display: none;
+      }
+  
+      .links .link {
+        justify-content: center;
+      }
+  
+      .toggle-btn {
+        width: 50px;
+      }
+    }
+  
+    .toggle-btn {
+      background-color: #34495e;
+      border: none;
+      color: white;
+      cursor: pointer;
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 80%;
+    }
+  
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+  
+      .link {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: start;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #000000;
+        }
+  
+        .icon {
+          margin-right: 10px;
+          font-size: 24px;
+        }
+  
+        .text {
+          white-space: nowrap;
+        }
+      }
+  
+      .active-link {
+        background-color: #1abc9c;
+      }
+    }
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ecf0f1;
+  
+    h1 {
+      margin-top: 0;
+    }
+  }
+  

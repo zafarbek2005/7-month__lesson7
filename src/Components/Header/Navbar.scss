@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.conteiner{
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+header{
+    padding-top: 20px;
+    width: 100%;
+    color: #000;
+    background: #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.Navbar{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    height: 50px;
+    padding-bottom: 10px;
+    font-family:  sans-serif;
+        a{
+            text-decoration: none;
+            color: #000;
+        }
+}
