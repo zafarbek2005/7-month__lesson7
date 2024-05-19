@@ -19,6 +19,6 @@ const baseQueryWithRetry = retry(baseQuery, { maxRetries: 0 });
 export const api = createApi({
   reducerPath: "mainApi",
   baseQuery: baseQueryWithRetry,
-  tagTypes: ["Users"], // O'zgarish bo'lganda qayta fetch qilish uchun Tag Typelar
+  tagTypes: ["users,products"], // O'zgarish bo'lganda qayta fetch qilish uchun Tag Typelar
   endpoints: () => ({}),
 });
