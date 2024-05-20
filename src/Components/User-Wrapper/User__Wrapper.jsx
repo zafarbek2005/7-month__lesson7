@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './User.scss';
   import Swal from 'sweetalert2';
 
 import { useDeleteUsersMutation } from '../../context/api/userApi';
+import EditModel from '../Edit__model/Edit__model';
 
 const UserWrapper = ({ data, isAdmin }) => {
   const [deleteUser, { isLoading }] = useDeleteUsersMutation();
+  const [edit,setedit] = useState(null)
 
   const handleDelete = (id) => {
     Swal.fire({
@@ -50,7 +52,7 @@ const UserWrapper = ({ data, isAdmin }) => {
           <p className="title">{user.job}</p>
           <p className="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aliquam aliquid porro!</p>
           <div className="buttons">
-            <button type="button" className="btn hire">Hire Me</button>
+          <button onClick={() => setedit(user)} type="button" className="btn hire">{isAdmin? 'Edit' :' Hire Me'}</button>
             {isAdmin && (
               <button 
                 type="button" 
@@ -87,7 +89,13 @@ const UserWrapper = ({ data, isAdmin }) => {
   return (
     <div className="user-wrapper container">
       {userCards}
+      {
+      edit ?   <EditModel data={edit} setData={setedit}/> 
+      :
+      <></>
+    }
     </div>
+    
   );
 };
 

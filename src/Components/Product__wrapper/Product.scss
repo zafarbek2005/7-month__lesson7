@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    max-width: 1440px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  
+  .user-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .profile-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  
+    .top-icons i {
+      color: #080911;
+  
+      &:nth-of-type(1) {
+        float: left;
+      }
+      &:nth-of-type(2) {
+        float: right;
+      }
+      &:nth-of-type(3) {
+        float: right;
+        padding-right: 0.8em;
+      }
+    }
+  
+    .profile {
+      margin-top: 2.2em;
+      position: relative;
+  
+      &:after {
+        width: 100%;
+        height: 1px;
+        content: ' ';
+        display: block;
+        margin-top: 1.3em;
+        background: #E9EFF6;
+      }
+  
+      .check {
+        position: absolute;
+        right: 5em;
+        bottom: 12.7em;
+  
+        i {
+          color: #fff;
+          width: 20px;
+          height: 20px;
+          font-size: 12px;
+          line-height: 20px;
+          text-align: center;
+          border-radius: 100%;
+          background: linear-gradient(to bottom right, #C90A6D, #FF48A0);
+        }
+      }
+  
+      .thumbnail {
+        width: 124px;
+        height: 124px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.5em;
+        border-radius: 100%;
+        box-shadow: 0 13px 26px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.2);
+      }
+  
+      .name {
+        color: #2D354A;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+      }
+  
+      .title {
+        color: #7C8097;
+        font-size: 0.75em;
+        font-weight: 300;
+        text-align: center;
+        padding-top: 0.5em;
+        padding-bottom: 0.7em;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+  
+      .description {
+        color: #080911;
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 1.3em;
+      }
+  
+      .buttons {
+        display: flex;
+        justify-content: space-around;
+  
+        .btn {
+          width: 130px;
+          height: 42px;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          font-weight: 300;
+          border-radius: 70px;
+          box-shadow: 0 13px 26px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.16);
+  
+          &.hire {
+            color: #fff;
+            background: linear-gradient(to bottom right, #C90A6D, #FF48A0);
+          }
+  
+          &.delete {
+            color: #fff;
+            background: linear-gradient(to bottom right, #E94B3C, #FF6E40);
+          }
+        }
+      }
+    }
+  
+    .social-icons {
+      display: flex;
+      margin-top: 1.2em;
+      justify-content: space-between;
+  
+      .icon {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+  
+        a {
+          color: #fff;
+          width: 60px;
+          height: 60px;
+          font-size: 28px;
+          line-height: 60px;
+          text-align: center;
+          border-radius: 30px;
+          box-shadow: 0 13px 26px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+  
+        &:nth-of-type(1) a {
+          background: linear-gradient(to bottom right, #C90A6D, #FF48A0);
+        }
+  
+        &:nth-of-type(2) a {
+          background: linear-gradient(to bottom right, #5E5AEC, #3F9EFC);
+        }
+  
+        &:nth-of-type(3) a {
+          background: linear-gradient(to bottom right, #6452E9, #639FF9);
+        }
+  
+        h4 {
+          color: #080911;
+          font-size: 1em;
+          margin-top: 1.3em;
+          margin-bottom: 0.2em;
+        }
+  
+        p {
+          color: #666B7D;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  
+  .concept {
+    position: absolute;
+    bottom: 25px;
+    color: #AAB0C4;
+    font-size: 0.9em;
+    font-weight: 400;
+  
+    a {
+      color: rgba(172, 25, 102, 1);
+      text-decoration: none;
+    }
+  }
+  

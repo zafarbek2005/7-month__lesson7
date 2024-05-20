@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import './create.scss';
+import '../Create/create.scss';
 import { usePostUsersMutation } from '../../../context/api/userApi';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Create = () => {
+const PCreate = () => {
   const [userData, setUserData] = useState({
     name: '',
     age: ''
@@ -62,4 +62,4 @@ const Create = () => {
   );
 };
 
-export default Create;
+export default PCreate;

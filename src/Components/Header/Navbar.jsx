@@ -11,13 +11,13 @@ const Navbar = () => {
     
         <div className="logo">
           <NavLink to={'/'}>
-          <strong>Logo</strong>
+         <h2>Logo</h2>
           </NavLink>
         </div>
 
         <div className="items">
             <Link to={"/admin"}>
-            Admin
+                 Admin
             </Link>
          
 

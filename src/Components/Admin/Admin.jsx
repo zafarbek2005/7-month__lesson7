@@ -1,3 +1,4 @@
+import { IoMdCreate } from "react-icons/io"; 
 import { FcManager } from "react-icons/fc";
 import { IoCreateOutline } from "react-icons/io5"; 
 import React, { useState } from 'react';
@@ -32,11 +33,23 @@ const Admin = () => {
             <FcManager className="icon" />
             <span className="text">Manage</span>
           </NavLink>
+          <NavLink 
+            to="/admin/ManageP" 
+            className={({ isActive }) => `link ${isActive ? 'active-link' : ''}`}
+          >
+            <FcManager className="icon" />
+            <span className="text">Product Manage</span>
+          </NavLink>
+          <NavLink 
+            to="/admin/Pcreate" 
+            className={({ isActive }) => `link ${isActive ? 'active-link' : ''}`}
+          >
+            <IoMdCreate className="icon" />
+            <span className="text">Product Create</span>
+          </NavLink>
         </div>
       </div>
       <div className="main-content">
-        {/* <h1>Admin Page</h1>
-        <p>Welcome to the admin panel!</p> */}
         <Outlet />
       </div>
     </div>
