@@ -13,7 +13,7 @@ const Admin = () => {
   };
 
   return (
-    <div className="admin-container conteiner">
+    <div className="admin-container ">
       <div className={`sidebar ${isSidebarOpen ? 'open' : 'closed'}`}>
         <button className="toggle-btn" onClick={toggleSidebar}>
           {isSidebarOpen ? 'Close' : 'Open'}
